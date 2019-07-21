@@ -1,3 +1,3 @@
 UPDATE characters
-SET name = 'Martian'
-WHERE ORDER BY(id) DESC LIMIT 1;
+SET species = 'Martian'
+WHERE characters.id = (SELECT MAX(id) FROM characters);
